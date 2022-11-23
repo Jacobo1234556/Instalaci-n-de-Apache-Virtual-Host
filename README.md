@@ -9,7 +9,7 @@ Configuración
 Para configurar dicho dns vamos a ulitlizar nuestro contenedor apache que creamos en la pactica "Proyecto Apache" y vamos a darle un resolutor de dns reutilizando el codigo de la practica "Dns Linux".
 
 Primero comenzamos añadien a nuestro docker-compose.yml un contenedor con un cliente alpine, el cual usaremos para conectarnos a la web, y un contenedor con una imagen bind9, el cual usaremos para resolver los nombres
-
+```
   asir_cliente:
       container_name: asir_cliente2
       image: alpine
@@ -33,12 +33,12 @@ Primero comenzamos añadien a nuestro docker-compose.yml un contenedor con un cl
 networks:
     bind9_subnet:
         external: true
-    
+ ```
 
 Tambien añadiremos dos carpetas una config, para confirar las zonas y una zonas que gestonara la resolución de nombres
 
-    Config
-
+- Config
+```
 zone "fabulas.com" {
         type master;
         file "/var/lib/bind/db.fabulas.com";
@@ -46,7 +46,8 @@ zone "fabulas.com" {
             any;
             };
 };
-
+```
+```
 options {
         directory "/var/cache/bind";
         forwarders {
@@ -70,8 +71,9 @@ options {
                 none;
         };
 };
-
-    Zonas
+```  
+- Zonas
+```
 
 $TTL    3600
 @       IN      SOA     ns.fabulas.com. root.fabulas.com. (
@@ -86,18 +88,21 @@ ns       IN      A       10.1.0.222
 
 maravillosas     IN      A       10.1.0.225
 oscuras     IN      CNAME       maravillosas
-
+```
 A continuacion nos dirigimos a nuestra carpeta Sites enable y añadimos nuestro server name como a continuación. Para conectarlo con el puerto indicado en mi caso el 80:
 
-This is an image
+![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20de%20pantalla%20de%202022-11-17%2019-59-57.png)
+
 
 Si hemos hecho todo bien ya podremos hacer un docker-compose up y ya tendremos nuestro set-up completo
 
 Comprobación
+![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20desde%202022-11-17%2020-21-43.png)
 
 Ahora para comprobarque funciona debemos entrar en la shell de nuestro cliente e intentaremos hacer ping a la ip nuestro apache y a la ip nuestro de servidor dns
 
-imagen
+
+![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20desde%202022-11-17%2020-01-05.png)
 
 Una vez comprobamos que tenemos conexión con el dns ya podremos hacer peticiones a la página y recebiremos la información que introduimos dentro imagen
 
@@ -117,8 +122,13 @@ a2ensite default-ssl.conf
 - `Modificacionn del fichero default-ssl.conf`
 
     DocumentRoot /var/www/html/ssl --- Nueva ruta
+    
+    
+![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20de%20pantalla%20de%202022-11-23%2019-52-11.png)
 
     SSLCertificateFile	/etc/apache2/certs/apache-certificate.crt  --- Nuevas rutas
     SSLCertificateKeyFile /etc/apache2/certs/apache.key
+    
+![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20de%20pantalla%20de%202022-11-23%2019-52-42.png)
 
 -  *Recordar Editar docker para añadir puerto 443*
