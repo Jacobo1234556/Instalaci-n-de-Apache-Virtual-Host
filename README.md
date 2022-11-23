@@ -34,6 +34,7 @@ networks:
     bind9_subnet:
         external: true
  ```
+Una vez hecho esto debemos asegurarnos de craer la network bind9 con el comando **__docker network create --subnet=10.1.0.222/24 --gateway 10.1.0.1**
 
 Tambien añadiremos dos carpetas una config, para confirar las zonas y una zonas que gestonara la resolución de nombres
 
@@ -108,21 +109,23 @@ Una vez comprobamos que tenemos conexión con el dns ya podremos hacer peticione
 
 ## Configurar SSL
 
-- Para empezar nos dirigimos a  attach shell del apache y escribimos el comando **__"a2enmod ssl"__**, esto activara la configuración de nustro certificados en nuestro contenedor
+Para empezar nos dirigimos a  attach shell del apache y escribimos el comando **__"a2enmod ssl"__**, esto activara la configuración de nustro certificados en nuestro contenedor. 
 
-- A continuación creamos la carpeta **__"certs"__**, donde guardaremos nuestros certificados, y nos movemos a dicha carpeta  
+A continuación creamos la carpeta **__"certs"__**, donde guardaremos nuestros certificados, y nos movemos a dicha carpeta  
 
-- Ahora para completar dicha configuración  utilizamos el comando **__"openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out apache-certificate.crt -keyout apache.key"__** y rellenamos los campos como se indique
+Ahora para completar dicha configuración  utilizamos el comando **__"openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out apache-certificate.crt -keyout apache.key"__** y rellenamos los campos como se indique
 
-- Ahora debemos avtivar la configuración Modificar el fichero default-ssl.conf con:
+Ahora debemos avtivar la configuración Modificar el fichero default-ssl.conf con:
 a2ensite default-ssl.conf
 
-- Tambien creamos una carpeta SSL, con un index dentro que sera lo que aparecera cuando cargemos el host
+Tambien creamos una carpeta SSL, con un index dentro que sera lo que aparecera cuando cargemos el host
 
-- `Modificacionn del fichero default-ssl.conf`
+- **Modificacionn del fichero default-ssl.conf**
+
+```
 
     DocumentRoot /var/www/html/ssl --- Nueva ruta
-    
+``` 
     
 ![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20de%20pantalla%20de%202022-11-23%2019-52-11.png)
 
