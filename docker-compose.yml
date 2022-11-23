@@ -9,6 +9,7 @@ services:
     ports:
     - '80:80'
     - '8000:8000'
+    - '443:443'
     volumes:
     - ./html:/var/www/html
     - ./confApache:/etc/apache2
