@@ -14,6 +14,19 @@ services:
     - ./html:/var/www/html
     - ./confApache:/etc/apache2
 
+  firefox:
+    container_name: firefox
+    image: jlesage/firefox
+    ports: 
+      - '5800:5800'
+#    volumes:
+#      - ./firefox:/config:rw
+    dns:
+      - 10.1.0.222
+    networks:
+      bind9_subnet:
+        ipv4_address: 10.1.0.233
+
   asir_cliente:
       container_name: asir_cliente2
       image: alpine
