@@ -12,10 +12,10 @@
 user_pref("app.normandy.first_run", false);
 user_pref("app.normandy.migrationsApplied", 12);
 user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1669304478);
-user_pref("app.update.lastUpdateTime.browser-cleanup-thumbnails", 1669303878);
+user_pref("app.update.lastUpdateTime.browser-cleanup-thumbnails", 1669307628);
 user_pref("app.update.lastUpdateTime.recipe-client-addon-run", 1669304238);
 user_pref("app.update.lastUpdateTime.region-update-timer", 1669304718);
-user_pref("app.update.lastUpdateTime.rs-experiment-loader-timer", 1669304118);
+user_pref("app.update.lastUpdateTime.rs-experiment-loader-timer", 1669308685);
 user_pref("app.update.lastUpdateTime.search-engine-update-timer", 1669303998);
 user_pref("app.update.lastUpdateTime.services-settings-poll-changes", 1669304358);
 user_pref("app.update.lastUpdateTime.telemetry_modules_ping", 1669303908);
@@ -27,7 +27,7 @@ user_pref("browser.contextual-services.contextId", "{9a07dab4-e65c-4b2a-bb42-53e
 user_pref("browser.download.viewableInternally.typeWasRegistered.avif", true);
 user_pref("browser.download.viewableInternally.typeWasRegistered.webp", true);
 user_pref("browser.laterrun.bookkeeping.profileCreationTime", 1669303848);
-user_pref("browser.laterrun.bookkeeping.sessionCount", 1);
+user_pref("browser.laterrun.bookkeeping.sessionCount", 9);
 user_pref("browser.laterrun.enabled", true);
 user_pref("browser.migration.version", 127);
 user_pref("browser.newtabpage.activity-stream.impressionId", "{6e42ae90-04de-4e22-855e-38278ad23e2c}");
@@ -36,12 +36,12 @@ user_pref("browser.pageActions.persistedActions", "{\"ids\":[\"bookmark\"],\"ids
 user_pref("browser.pagethumbnails.storage_version", 3);
 user_pref("browser.proton.toolbar.version", 3);
 user_pref("browser.shell.checkDefaultBrowser", true);
-user_pref("browser.shell.mostRecentDateSetAsDefault", "1669303852");
+user_pref("browser.shell.mostRecentDateSetAsDefault", "1669308675");
 user_pref("browser.startup.couldRestoreSession.count", 1);
 user_pref("browser.startup.homepage_override.buildID", "20220610010118");
 user_pref("browser.startup.homepage_override.mstone", "101.0.1");
-user_pref("browser.startup.lastColdStartupCheck", 1669303851);
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"customizableui-special-spring1\",\"urlbar-container\",\"customizableui-special-spring2\",\"save-to-pocket-button\",\"downloads-button\",\"fxa-toolbar-menu-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"save-to-pocket-button\",\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"PersonalToolbar\"],\"currentVersion\":17,\"newElementCount\":2}");
+user_pref("browser.startup.lastColdStartupCheck", 1669308675);
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"customizableui-special-spring1\",\"urlbar-container\",\"customizableui-special-spring2\",\"save-to-pocket-button\",\"downloads-button\",\"fxa-toolbar-menu-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"save-to-pocket-button\",\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"PersonalToolbar\",\"toolbar-menubar\",\"TabsToolbar\"],\"currentVersion\":17,\"newElementCount\":2}");
 user_pref("browser.urlbar.placeholderName", "Google");
 user_pref("browser.urlbar.quicksuggest.migrationVersion", 2);
 user_pref("browser.urlbar.quicksuggest.scenario", "history");
@@ -154,7 +154,7 @@ user_pref("security.sandbox.content.tempDirSuffix", "77a19b30-b6af-462c-a525-fe3
 user_pref("services.sync.engine.addresses.available", true);
 user_pref("storage.vacuum.last.index", 0);
 user_pref("storage.vacuum.last.places.sqlite", 1669304031);
-user_pref("toolkit.startup.last_success", 1669303846);
+user_pref("toolkit.startup.last_success", 1669308672);
 user_pref("toolkit.telemetry.cachedClientID", "440032c3-3a02-437b-8bfb-3a25902c8b61");
 user_pref("toolkit.telemetry.previousBuildID", "20220610010118");
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);

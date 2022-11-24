@@ -26,6 +26,23 @@ services:
     networks:
       bind9_subnet:
         ipv4_address: 10.1.0.93
+  
+  wireshark:
+    image: lscr.io/linuxserver/wireshark:latest
+    container_name: wire
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - seccomp:unconfined 
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./wires:/config
+    ports:
+      - 3000:3000
+    restart: unless-stopped
 
   asir_cliente:
       container_name: asir_cliente2
@@ -41,6 +58,9 @@ services:
   bind9:
     container_name: asir_bind
     image: internetsystemsconsortium/bind9:9.16
+    ports:
+      - 5300:53/udp
+      - 5300:53/tcp
     networks:
       bind9_subnet:
         ipv4_address: 10.1.0.222
