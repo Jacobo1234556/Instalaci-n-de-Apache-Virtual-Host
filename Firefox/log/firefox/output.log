@@ -1,0 +1,5 @@
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: glxtest: libpci missing (t=1.17215) [GFX1-]: glxtest: libpci missing
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: glxtest: libpci missing (t=1.17215) |[1][GFX1-]: glxtest: libEGL missing (t=1.17221) [GFX1-]: glxtest: libEGL missing
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: glxtest: libpci missing (t=1.17215) |[1][GFX1-]: glxtest: libEGL missing (t=1.17221) |[2][GFX1-]: glxtest: libGL.so.1 missing (t=1.17223) [GFX1-]: glxtest: libGL.so.1 missing
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: glxtest: libpci missing (t=1.17215) |[1][GFX1-]: glxtest: libEGL missing (t=1.17221) |[2][GFX1-]: glxtest: libGL.so.1 missing (t=1.17223) |[3][GFX1-]: glxtest: libEGL missing (t=1.17225) [GFX1-]: glxtest: libEGL missing
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: glxtest: libpci missing (t=1.17215) |[1][GFX1-]: glxtest: libEGL missing (t=1.17221) |[2][GFX1-]: glxtest: libGL.so.1 missing (t=1.17223) |[3][GFX1-]: glxtest: libEGL missing (t=1.17225) |[4][GFX1-]: No GPUs detected via PCI (t=1.17227) [GFX1-]: No GPUs detected via PCI

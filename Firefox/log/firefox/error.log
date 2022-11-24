@@ -1,0 +1,4 @@
+[Parent 531, Main Thread] WARNING: Failed to execute child process “update-desktop-database” (No such file or directory): 'glib warning', file /home/buildozer/aports/community/firefox/src/firefox-101.0.1/toolkit/xre/nsSigHandlers.cpp:167
+
+(firefox-default:531): GLib-GIO-WARNING **: 15:30:47.826: Failed to execute child process “update-desktop-database” (No such file or directory)
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm

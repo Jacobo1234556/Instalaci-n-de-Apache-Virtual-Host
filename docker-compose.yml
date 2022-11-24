@@ -19,13 +19,13 @@ services:
     image: jlesage/firefox
     ports: 
       - '5800:5800'
-#    volumes:
-#      - ./firefox:/config:rw
+    volumes:
+      - ./Firefox:/config:rw
     dns:
       - 10.1.0.222
     networks:
       bind9_subnet:
-        ipv4_address: 10.1.0.233
+        ipv4_address: 10.1.0.93
 
   asir_cliente:
       container_name: asir_cliente2
