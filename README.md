@@ -189,4 +189,4 @@ Tambien
  **__mkdir wires__**
  
  Si hemos hecho todo correctamente nuestro contenedor wireshark ya debería funcionar
- ![This is an image](/home/asir2a/Escritorio/proyectoApache-master/imagenes/Captura desde 2022-11-24 17-59-15.png)
+ ![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20desde%202022-11-24%2017-59-15.png)
