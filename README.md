@@ -109,7 +109,7 @@ Una vez comprobamos que tenemos conexión con el dns ya podremos hacer peticione
 
 ## Configurar SSL
 
-Para empezar nos dirigimos a  attach shell del apache y escribimos el comando **__"a2enmod ssl"__**, esto activara la configuración de nustro certificados en nuestro contenedor. 
+Para empezar nos dirigimos a  attach shell del apache y escribimos el comando **__"a2enmod ssl"__**, esto activara la configuración de nustro certificados en nuestro contenedor.
 
 A continuación creamos la carpeta **__"certs"__**, donde guardaremos nuestros certificados, y nos movemos a dicha carpeta  
 
@@ -125,11 +125,11 @@ Tambien creamos una carpeta SSL, con un index dentro que sera lo que aparecera c
 ```
 
     DocumentRoot /var/www/html/ssl --- Nueva ruta
-``` 
+```
     
 ![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20de%20pantalla%20de%202022-11-23%2019-52-11.png)
 
-    SSLCertificateFile	/etc/apache2/certs/apache-certificate.crt  --- Nuevas rutas
+    SSLCertificateFile    /etc/apache2/certs/apache-certificate.crt  --- Nuevas rutas
     SSLCertificateKeyFile /etc/apache2/certs/apache.key
     
 ![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20de%20pantalla%20de%202022-11-23%2019-52-42.png)
@@ -140,12 +140,12 @@ Tambien creamos una carpeta SSL, con un index dentro que sera lo que aparecera c
 
 ## Añadir firefox
 
-Para añadir firefox lo que vamos a hacer es añadir las siguientes lineas de codigo 
+Para añadir firefox lo que vamos a hacer es añadir las siguientes lineas de codigo
 ```
   firefox:
     container_name: firefox
     image: jlesage/firefox
-    ports: 
+    ports:
       - '5800:5800'
     volumes:
       - ./Firefox:/config:rw
@@ -158,7 +158,35 @@ Para añadir firefox lo que vamos a hacer es añadir las siguientes lineas de co
  Tambien creamos una nueva carpeta firefox donde se van a guardar los ficheros del volumen
  **__mkdir firefox__**
  
- Si hemos hecho todo correctamente nuestro contenedor firefox ya debería funcionar 
+ Si hemos hecho todo correctamente nuestro contenedor firefox ya debería funcionar
  ![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20desde%202022-11-24%2016-38-58.png)
 
+## Añadir Wireshark
+
+Para añadir un contenedor de Wireshark añadimos el siguiente codigo a nuestro codigo a nuestro **__Docker Compose__**
+
+```
+  wireshark:
+    image: lscr.io/linuxserver/wireshark:latest
+    container_name: wire
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - seccomp:unconfined 
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./wires:/config
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+```
+Tambien
+
+ Tambien creamos una nueva carpeta firefox donde se van a guardar los ficheros del volumen
+ **__mkdir wires__**
  
+ Si hemos hecho todo correctamente nuestro contenedor wireshark ya debería funcionar
+ ![This is an image](/home/asir2a/Escritorio/proyectoApache-master/imagenes/Captura desde 2022-11-24 17-59-15.png)
