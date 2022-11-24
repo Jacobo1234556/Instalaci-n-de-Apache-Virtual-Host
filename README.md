@@ -137,3 +137,21 @@ Tambien creamos una carpeta SSL, con un index dentro que sera lo que aparecera c
 -  *Recordar Editar docker para añadir puerto 443*
 - Si hemos completado todos los pasos correctamente nuestro ssl ya deber
 ![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20de%20pantalla%20de%202022-11-23%2020-29-40.png)
+
+## Añadir firefox
+
+Para añadir firefox lo que vamos a hacer es añadir las siguientes lineas de codigo 
+```
+  firefox:
+    container_name: firefox
+    image: jlesage/firefox
+    ports: 
+      - '5800:5800'
+    volumes:
+      - ./Firefox:/config:rw
+    dns:
+      - 10.1.0.222
+    networks:
+      bind9_subnet:
+        ipv4_address: 10.1.0.233
+ ```
