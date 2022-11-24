@@ -155,3 +155,10 @@ Para añadir firefox lo que vamos a hacer es añadir las siguientes lineas de co
       bind9_subnet:
         ipv4_address: 10.1.0.233
  ```
+ Tambien creamos una nueva carpeta firefox donde se van a guardar los ficheros del volumen
+ **__mkdir firefox__**
+ 
+ Si hemos hecho todo correctamente nuestro contenedor firefox ya debería 
+ ![This is an image](https://github.com/Jacobo1234556/Instalacion_de_Apache_Virtual-Host/blob/main/imagenes/Captura%20desde%202022-11-24%2016-38-58.png)
+
+ 
